@@ -5,10 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World!</title>
+    <title>My Django Project!</title>
 </head>
 <body>
-    <div class="title">WPS-5th My Django Project!</div>
-    {% for
+    <div class="main_title">WPS-5th My Django Project!</div>
+    <div class="post_list_title">{{title}}</div>
+    <div class="post_contents">
+        {% for post in posts %}
+        <div class="post_wrap">
+            <div class="post_title">{{post.title}}</div>
+            <div class="post_published_date">Published : {{post.published_date}}</div>
+            <div class="post_text">{{post.text}}</div>
+        </div>
+        {%endfor%}
+    </div>
+
 </body>
 </html>
